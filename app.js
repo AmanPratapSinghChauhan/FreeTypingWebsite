@@ -4,7 +4,7 @@ const app=express();
 const ejs=require('ejs')
 var sp;
 var speedA=[];
-app.use(express.static("public"));
+app.use(express.static("public1"));
 app.use(express.json());
 app.use(bodyparser.urlencoded({extended:true}));
 app.set('view engine','ejs');
