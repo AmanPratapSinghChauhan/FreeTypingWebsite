@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Typing Website</title>
+  </head>
+  <audio id="correctAudio">
+  <source src="correct.wav" type="audio/mpeg">
+
+</audio>
+<audio id="wrongAudio">
+<source src="wrong.wav" type="audio/mpeg">
+</audio>
+    <body onkeydown="{matchingAlgorithm(event); timeFunctioncheck();}">
+    <header>
+      <h1>Typing Website</h1>
+    </header>
+    <br>
+    <br>
+    <div class="w3-light-grey note">
+      <h1>Time:
+        <span id="time">60</span>
+          seconds
+      </h1>
+      <h1>Speed:
+      <span id="speed">0</span>
+    Words/Min</h1>
+      <h1>Accuracy:
+        <span id="error">0%</span>
+      </h1>
+
+      <div id='timecountdown' class="w3-green" style="height:30px;width:100%;border:1px solid black;"></div>
+    </div>
+
+  <div class="note" onkeydown="matchingAlgorithm(event)">
+    <p id="demo" ></p>
+</div>
+<form id='myform' action="/result" method="post">
+
+</form>
+    <script type="text/javascript" src="server.js">
+
+    </script>
+  </body>
+</html>
