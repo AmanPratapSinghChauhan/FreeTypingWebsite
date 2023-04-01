@@ -16,6 +16,7 @@ app.post('/result',function(req,res){
   speedA=req.body.speedArray;
 })
 app.post('/',function(req,res){
+  console.log(sp);
   res.render('result',{userSpeed:sp,speedAr:speedA});
 })
 app.listen(3000,function(){
