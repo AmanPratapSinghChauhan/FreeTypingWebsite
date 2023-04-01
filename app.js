@@ -11,11 +11,11 @@ app.set('view engine','ejs');
 app.get('/',function(req,res){
   res.render('index');
 });
-app.post('/',function(req,res){
+app.post('/result',function(req,res){
   sp=req.body.speed;
   speedA=req.body.speedArray;
 })
-app.get('/result',function(req,res){
+app.post('/',function(req,res){
   res.render('result',{userSpeed:sp,speedAr:speedA});
 })
 app.listen(3000,function(){
