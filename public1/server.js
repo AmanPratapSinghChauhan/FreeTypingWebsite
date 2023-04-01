@@ -1,4 +1,4 @@
-var atr=[];
+ var atr=[];
 atr[1] = "Rory had always been an animal lover. But he grew up with two very mean parents. His mother said she had allergies, but every time he asked her what the allergies were, they changed. If he wanted a cat, she was allergic to cats. If he wanted a fish, she was allergic to fishes. If he wanted to go to the zoo, she was allergic to crowds. Rorys dad didnt have any allergies, but he hated animals. However, he loved eating meat, so when Rory said he wanted a cat, his dad said, Mmm cat! I have not eaten cat before. We can get it nice and fat and then eat it. Then Rory cried and stopped asking for a pet. When Rory finished university, he moved to a small town, so he could have lots of space. The town had lots of dog parks, and it also had a cat park. Cat parks were not normal, so he was very excited to go there.";
 atr[2] ="You step inside the building, except it is not really a building, is it? It is the ghost of a building that never was. You remember what you learned at school: there is a place called limbo, a space between Heaven and Hell. Babies who die before they can be baptised go there, as it could not be judged whether they should enter Heaven or Hell. So mothers whose children die while being born do not even get the relief of knowing that their babies have gone to Heaven. Instead, they wait in limbo until the Final Judgement comes and the world ends. You could carry a child inside you for nine months, not even get to hold it, not even get to know that it went to Heaven.";
 atr[3] ="The next morning, the lord of the castle rose early, went to mass and then headed out for the hunt. All the animals ran in fear at the sound of the hunters and their dogs, but the lord and his men did not slow down. They chased the female deer, but let the male deer run free, as there was a law in the land that prohibited killing male deer at this time of year. Meanwhile, Gawain lay comfortable in bed, and woke up in the late hours of the morning. But he did not rise, enjoying the warmth of the fire and the rays of sun shining on his bed, after the long, cold months of travelling. The lady of the castle went quietly into the room, opening and closing the door without a sound. She stood there by the entrance, waiting to see if Gawain would move. Although Gawain was awake, he wished to remain in peace and quiet a little longer, so he pretended to be asleep. The lady could not believe this, and went right up to his bed. With a wicked smile, she sat at the end of the bed, trapping his legs beneath her. ";
@@ -146,7 +146,7 @@ function timeFunction() {
         speed:speed,
         speedArray:speedarray
       }
-      fetch("/", {
+      fetch("/result", {
               method: "POST",
               headers: {
                   "Content-Type": "application/json",
@@ -154,8 +154,8 @@ function timeFunction() {
               body: JSON.stringify(json),
           });
       // document.myform.submit();
-      location.href="/result";
-      // document.getElementById('myform').submit();
+      // location.href="/result";
+      document.getElementById('submit').click();
 
 
       time = 62;
