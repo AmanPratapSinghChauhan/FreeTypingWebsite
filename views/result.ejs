@@ -21,14 +21,11 @@
 <div class="reload">
     <a  href="/"> Type Again </a>
 </div>
-
-
 <script type="text/javascript">
 var userSp= <%=userSpeed%>;
 console.log(userSp)
 if(userSp<30 ){
   document.getElementById('youare').innerHTML="Turtle";
-
 }
 else if(userSp>30&&userSp<50){
     document.getElementById('youare').innerHTML="T-Rex";
@@ -104,8 +101,6 @@ else{
   vaa[58]=<%=speedAr[58]%>;
   vaa[59]=<%=speedAr[59]%>;
   // vaa[60]=<%=speedAr[60]%>;
-
-
   for(var i=0;i<=59;i++){
     if(i==0){
       const ab=['Time','Speed'];
@@ -118,7 +113,6 @@ else{
   }
   console.log(a);
   function drawChart(){
-
     const data=google.visualization.arrayToDataTable(a);
     const options = {
   title: 'Typing Speed In One Minute',
@@ -126,12 +120,9 @@ else{
   vAxis: {title: 'Speed'},
   legend:'none'
 };
-
   const chart=new google.visualization.LineChart(document.getElementById('myChart'));
   chart.draw(data,options);
   }
-
-
 </script>
 
 </body>
